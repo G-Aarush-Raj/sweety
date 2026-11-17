@@ -1,0 +1,29 @@
+:root { --bg:#f4f7f9; --ink:#14213d; --muted:#5b6b7f; --line:#d8e0e8; --accent:#1f6f8b; --accent-ink:#fff; --danger:#b3261e; --card:#fff; }
+* { box-sizing: border-box; }
+body { margin:0; background:var(--bg); color:var(--ink); font:16px/1.5 "Segoe UI", system-ui, sans-serif; }
+h1 { margin:0; font-size:1.6rem; letter-spacing:-.02em; }
+h2 { margin:0 0 .75rem; font-size:1.1rem; } h3 { margin:0; font-size:1rem; }
+.layout { max-width:1000px; margin:0 auto; padding:1rem; }
+header { display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem; }
+.row { display:flex; gap:.5rem; align-items:center; flex-wrap:wrap; }
+.columns { display:grid; grid-template-columns:1fr 1fr; gap:1rem; align-items:start; }
+@media (max-width:760px) { .columns { grid-template-columns:1fr; } }
+.card { background:var(--card); border:1px solid var(--line); border-radius:8px; padding:1rem; margin-bottom:1rem; }
+label { display:block; margin-bottom:.75rem; font-size:.9rem; color:var(--muted); }
+input, select { display:block; width:100%; margin-top:.25rem; padding:.55rem; border:1px solid var(--line); border-radius:6px; font:inherit; color:var(--ink); background:#fff; }
+button { padding:.5rem .9rem; border:1px solid var(--line); border-radius:6px; background:#fff; font:inherit; cursor:pointer; }
+button.primary { background:var(--accent); color:var(--accent-ink); border-color:var(--accent); }
+button.danger { color:var(--danger); }
+button.link { border:0; background:none; color:var(--accent); text-decoration:underline; margin-top:.5rem; }
+button:focus-visible, input:focus-visible, select:focus-visible { outline:3px solid #9cc9d8; outline-offset:1px; }
+.errors { background:#fdecea; border:1px solid #f3b8b3; color:var(--danger); border-radius:6px; padding:.5rem .75rem; margin-bottom:.75rem; }
+.errors p { margin:.15rem 0; }
+.empty { color:var(--muted); margin:.5rem 0 0; }
+.hint, .range, .tagline { color:var(--muted); font-size:.9rem; margin:.25rem 0 0; }
+.datebar { margin-bottom:1rem; max-width:240px; }
+.slot-list { list-style:none; margin:.5rem 0 0; padding:0; }
+.slot-list li { display:flex; justify-content:space-between; align-items:center; gap:.5rem; padding:.5rem 0; border-top:1px solid var(--line); flex-wrap:wrap; }
+.stats { display:grid; grid-template-columns:repeat(4,1fr); gap:.5rem; margin:.75rem 0 0; }
+.stats dt { font-size:.8rem; color:var(--muted); } .stats dd { margin:0; font-size:1.4rem; font-weight:600; }
+.auth { max-width:380px; margin:8vh auto; padding:1rem; }
+.auth .card { margin-top:1rem; }
